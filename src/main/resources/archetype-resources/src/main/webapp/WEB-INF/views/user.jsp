@@ -8,11 +8,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>User</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
-        <p>This is the homepage! User Persisted!</p> 
-        <p>${symbol_dollar}{user}</p>          
+        <h1>User:</h1>
+        <p>${symbol_dollar}{user}</p>        
     </body>
 </html>
