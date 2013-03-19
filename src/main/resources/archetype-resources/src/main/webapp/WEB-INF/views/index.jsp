@@ -8,12 +8,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home</title>
+        <title>Index</title>
     </head>
     <body>
-        <h1>Welcome to the Home Page</h1>
-        <p>New User Persisted! Please check User page.</p> 
-        <p>${symbol_dollar}{user}</p>
-        <a href="j_spring_security_logout">Logout</a>           
+        <h1>Non secured page</h1>
+        <p>Welcome!</p> 
     </body>
 </html>

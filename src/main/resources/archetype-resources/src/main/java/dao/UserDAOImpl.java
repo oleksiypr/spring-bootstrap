@@ -3,6 +3,8 @@
 #set( $symbol_escape = '\' )
 package ${package}.dao;
 
+import java.util.List;
+
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -23,5 +25,11 @@ public class UserDAOImpl implements UserDAO {
 	@Override
 	public User find(int id) {
 		return (User) sessionFactory.getCurrentSession().get(User.class, id);
+	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<User> findAll() {
+		return (List<User>) sessionFactory.getCurrentSession().createCriteria(User.class).list();
 	}
 }
