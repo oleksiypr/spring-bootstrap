@@ -20,7 +20,7 @@ import freemarker.template.TemplateException;
 
 @Configuration
 @ComponentScan(basePackages = "${package}.web")
-@ImportResource("classpath:/global-metod-security-enabler.xml")
+@ImportResource("classpath:/mvc-security-enabler.xml")
 @EnableWebMvc
 public class MvcConfiguration extends WebMvcConfigurerAdapter {
 

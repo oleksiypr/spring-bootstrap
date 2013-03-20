@@ -16,8 +16,8 @@ import org.springframework.core.io.ClassPathResource;
 @ComponentScan(basePackages = {
 	"${package}.dao",
 	"${package}.service"})
-@ImportResource("classpath:/global-metod-security-enabler.xml")
-@Import({RepositoryConfig.class, AppSecurityConfig.class})
+@ImportResource("classpath:/app-security.xml")
+@Import({RepositoryConfig.class})
 public class RootConfig {
 	@Bean
 	public PropertyPlaceholderConfigurer getPropertyPlaceholderConfigurer() {
