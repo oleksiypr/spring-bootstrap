@@ -4,7 +4,6 @@
 package ${package}.config;
 
 import java.io.IOException;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -19,7 +18,7 @@ import freemarker.template.TemplateException;
 
 
 @Configuration
-@ComponentScan(basePackages = "${package}.web")
+@ComponentScan(basePackages = "${package}.web.controller")
 @ImportResource("classpath:/mvc-security-enabler.xml")
 @EnableWebMvc
 public class MvcConfiguration extends WebMvcConfigurerAdapter {

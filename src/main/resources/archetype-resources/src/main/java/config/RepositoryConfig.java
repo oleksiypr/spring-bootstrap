@@ -59,7 +59,7 @@ public class RepositoryConfig {
 	}
 
 	@Bean
-	public LocalSessionFactoryBean getSessionFactory() {
+	public LocalSessionFactoryBean sessionFactory() {
 		LocalSessionFactoryBean asfb = new LocalSessionFactoryBean();
 		asfb.setDataSource(getDataSource());
 		asfb.setHibernateProperties(getHibernateProperties());

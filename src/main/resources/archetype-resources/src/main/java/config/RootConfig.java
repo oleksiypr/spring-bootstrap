@@ -11,9 +11,9 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.core.io.ClassPathResource;
 
-
 @Configuration
 @ComponentScan(basePackages = {
+	"${package}.web.rest",	
 	"${package}.dao",
 	"${package}.service"})
 @ImportResource("classpath:/app-security.xml")
@@ -25,5 +25,5 @@ public class RootConfig {
 		ppc.setLocation(new ClassPathResource("db.properties"));
 		ppc.setIgnoreUnresolvablePlaceholders(true);
 		return ppc;
-	}	
+	}
 }

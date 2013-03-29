@@ -57,7 +57,7 @@ public class WebAppFrontConteroller {
 		}		
 		
 		User u = userService.find(id);
-		mv.addObject("user", u == null ? "No user found" : u.toString());
+		mv.addObject("user", u == null ? "No user found" : u);
 		return mv;
 	}	
 	

@@ -13,7 +13,7 @@ import ${package}.domain.User;
 
 
 @Transactional
-@Service
+@Service("userService")
 public class UserServiceImpl implements UserService {
 	@Autowired
 	private UserDAO userDao;
