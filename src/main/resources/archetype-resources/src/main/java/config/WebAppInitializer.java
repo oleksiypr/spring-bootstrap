@@ -29,13 +29,10 @@ public class WebAppInitializer implements WebApplicationInitializer {
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		
 		// Context init parameters
-		servletContext.setInitParameter(ContextLoader.CONTEXT_CLASS_PARAM, 
-				"org.springframework.web.context.support.AnnotationConfigWebApplicationContext");
-		
+		servletContext.setInitParameter(ContextLoader.CONTEXT_CLASS_PARAM, "org.springframework.web.context.support.AnnotationConfigWebApplicationContext");
 		servletContext.setInitParameter("resteasy.servlet.mapping.prefix", "/rest");
 		servletContext.setInitParameter("defaultHtmlEscape", "true");
-		servletContext.setInitParameter(ContextLoader.CONTEXT_INITIALIZER_CLASSES_PARAM, 
-				"${package}.config.RootContextInitializer");
+		servletContext.setInitParameter(ContextLoader.CONTEXT_INITIALIZER_CLASSES_PARAM, "${package}.config.RootContextInitializer");
 		
 		// Web-app listeners
 		servletContext.addListener(new ResteasyBootstrap());

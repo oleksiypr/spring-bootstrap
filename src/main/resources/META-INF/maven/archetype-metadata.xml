@@ -58,7 +58,13 @@
       <includes>
         <include>.classpath</include>
         <include>.project</include>
-        <include>web.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>deploy-local.sh</include>
+        <include>deploy.sh</include>
       </includes>
     </fileSet>
   </fileSets>
