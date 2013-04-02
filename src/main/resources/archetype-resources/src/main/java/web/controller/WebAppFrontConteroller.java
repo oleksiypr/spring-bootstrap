@@ -43,7 +43,7 @@ public class WebAppFrontConteroller {
 		u.setAddress("Bar Street");
 		
 		userService.save(u);		
-		mv.addObject("user", u.getId() == null ? "User not saved!" : u.toString());
+		mv.addObject("user", u.getId() == null ? "User not saved!" : u);
 		return mv;
 	}
 	

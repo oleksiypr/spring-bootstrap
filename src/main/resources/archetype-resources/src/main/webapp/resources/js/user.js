@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	$("button").click(function() {
+	$("#editUser").click(function() {
 		var json ={
 			'id': $("#userId").val(),
 			'name': $("#userName").val(),
@@ -14,12 +14,12 @@ $(document).ready(function() {
 			data: JSON.stringify(json), 
 				
 			success : function(result) {
-				$("div").html("User saved!");
+				$("#editResult").html("User saved!");
 			},
 			
 			error:  function(xhr, str){
 			    alert('An error arised: ' + str);
-			    $("div").html("<span style = 'color:#ff0000'>Failed!</span>");
+			    $("#editResult").html("<span style = 'color:#ff0000'>Failed!</span>");
 			}
 		});
 	});

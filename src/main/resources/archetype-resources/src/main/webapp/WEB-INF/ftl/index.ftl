@@ -1,12 +1,11 @@
-<!DOCTYPE html>
+<#import "/spring.ftl" as spring />
+<#assign sec=JspTaglibs["http://www.springframework.org/security/tags"] />
 
-<html>
-    <head>
-        <title>Index</title>
-    </head>
-    
-    <body>
-        <h1>Non secured page</h1>
-        <p>Welcome!</p> 
-    </body>
-</html>
+<#assign titleString>Index</#assign>
+
+<#assign content>
+<h1>Non secured page</h1>
+<p>Welcome!</p> 
+</#assign>
+
+<#include "wrapper.ftl" />

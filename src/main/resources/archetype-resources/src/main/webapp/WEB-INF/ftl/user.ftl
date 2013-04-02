@@ -1,24 +1,19 @@
-<!DOCTYPE html>
+<#import "/spring.ftl" as spring />
 
-<head>
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src = "../resources/user.js" type="text/javascript"></script>
-</head> 
+<#assign titleString>User</#assign>
+<#assign customScript>
+	<script src="<@spring.url "/resources/js/user.js"/>"></script>
+</#assign>
 
-<html>
-    <head>
-        <title>User</title>
-    </head>
-    
-    <body>
-        <h1>User:</h1>     	
-     	<div></div>
+<#assign content>
+<h1>User:</h1>     	
+<div id="editResult"></div>
      	
-     	<input id="userId" type="hidden" size="40" value="${user.id}"/><br/>
-     	<input id="userName" type="text" size="40" value="${user.name}"/><br/>
-     	<input id="userAddress" type="text" size="40" value="${user.address}"/><br/>
-		<button>Edit</button><br/>
-		
-        <a href="../logout">Logout</a>        
-    </body>
-</html>
+<input id="userId" type="hidden" size="40" value="${user.id}"/><br/>
+<input id="userName" class="input-block-level" type="text" size="40" value="${user.name}"/><br/>
+<input id="userAddress" class="input-block-level" type="text" size="40" value="${user.address}"/>
+<a class="btn btn-primary btn-large" id="editUser">Edit</a><br/>
+</#assign>
+
+<#include "wrapper.ftl" />        
+
