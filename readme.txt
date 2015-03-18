@@ -1,6 +1,4 @@
-Use this archetyoe to crate your oun Spring 3.2 + Hibernate 4 + Spring Security project.
-Chage <É> values with appropriate ones. 
-
+Use this archetpye to create your oun Spring 3.2 + Hibernate 4 + Spring Security project.
 
 mvn archetype:generate                  	\
   -DarchetypeGroupId=com.anahoret		\
